@@ -7,7 +7,7 @@ class App extends React.Component {
     super()
     this.state = {
       pokemons: [],
-      pokemonImages: []
+      showPokemons: false
     }
   }
 
@@ -15,14 +15,12 @@ class App extends React.Component {
     getPokemons()
       .then(pokemons => {
         this.setState({pokemons: pokemons})
-      })
-      .catch(err => { console.error ('error:', err) })
+      .catch(err => { console.error('error:', err) })
   }
   render () {
     return (
       <div>
-        <Pokemons pokemons={this.state.pokemons} />
-
+        <Pokemons pokemons={this.state.pokemons}/>
       </div>
     )
   }
