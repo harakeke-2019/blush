@@ -1,10 +1,30 @@
 import React from 'react'
+import {getPokemons} from '../api'
+import Pokemons from './Pokemons'
 
-const App = () => {
-  return (
-    <h1>React development has begun!</h1>
-  )
+class App extends React.Component {
+  constructor () {
+    super()
+    this.state = {
+      pokemons: [],
+      pokemonImages: []
+    }
+  }
+
+  componentDidMount () {
+    getPokemons()
+      .then(pokemons => {
+        this.setState({pokemons: pokemons})
+      })
+      .catch(err => { console.error ('error:', err) })
+  }
+  render () {
+    return (
+      <div>
+        <Pokemons pokemons={this.state.pokemons} />
+
+      </div>
+    )
+  }
 }
-
 export default App
-
