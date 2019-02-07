@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import App from './components/App'
+import Test1 from './components/Test1'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <App />,
+    <Test1 />,
     document.getElementById('app')
   )
 })
