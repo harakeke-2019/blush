@@ -175,6 +175,10 @@ font-family: Montserrat;
   }
 
 .stateChange{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-items: center;
   height: 500px;
   width: 100%;
   background-image: url('pokemon-background.png');
@@ -182,10 +186,21 @@ font-family: Montserrat;
   background-repeat: no-repeat;
   background-size: cover;
 
+
 }
 
 .api{
+  margin-bottom: 10%;
+  margin-left: 40%;
+}
+
+.api img{
 z-index: 1;
-top: 0;
+position: block;
+bottom: 10px;
+width: 150px;
+height: auto;
 
 }
+
+
