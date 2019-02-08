@@ -1,10 +1,11 @@
-import React from "react"
+import React from 'react'
 import {Link} from 'react-router-dom'
+// import Dropdown from './Dropdown'
 
-class Home extends React.Component{
-  constructor(props){
+class Home extends React.Component {
+  constructor (props) {
     super(props)
-    this.state={}
+    this.state = {}
   }
   render () {
     return (
@@ -17,9 +18,9 @@ class Home extends React.Component{
           <form>
             <input type="text" placeholder="  Full Name" /><br />
             <input type="text" placeholder="  Birthday" /><br />
-            <input type="text" placeholder="  Location" /><br />
+            {/* <Dropdown /> */}
             <div className="enter">
-              <Link to='/dashboard'>enter</Link>
+              <Link to='/dashboard'> enter</Link>
             </div>
           </form>
 

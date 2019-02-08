@@ -1,6 +1,7 @@
 import React from 'react'
 import {getPokemons} from '../api'
 import Pokemons from './Pokemons'
+import {Link} from 'react-router-dom'
 
 class Dashboard extends React.Component {
   constructor (props) {
@@ -31,16 +32,16 @@ class Dashboard extends React.Component {
           <div className="row">
             <div className="col1">
               <div className="userInfo">
-                <p>Hello name</p>
+                <p>Hello Evandah</p>
                 <div className="starSignBirthday">
-                  <p>starSign</p>
-                  <h6>Birthay</h6>
+                  <p>Your starsign is: Aquarius</p>
+                  <h6>09/02/1996</h6>
                 </div>
               </div>
               <p className="intro">Discover what your Pokemon is based on your starsign</p>
               <div className="dashboardbuttons">
                 <div className="button">
-                  <p>Back</p>
+                  <p><Link to='/'> back</Link></p>
                 </div>
 
               </div>
