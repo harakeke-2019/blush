@@ -6,21 +6,23 @@ class App extends React.Component {
   constructor () {
     super()
     this.state = {
-      pokemons: [],
-      showPokemons: false
+      pokemon: {}
     }
   }
 
   componentDidMount () {
-    getPokemons()
-      .then(pokemons => {
-        this.setState({pokemons: pokemons})
+    const id = Math.floor(Math.random() * 19 + 1)
+    getPokemons(id)
+      .then(pokemon => {
+        this.setState({pokemon: pokemon})
+      })
       .catch(err => { console.error('error:', err) })
   }
+
   render () {
     return (
       <div>
-        <Pokemons pokemons={this.state.pokemons}/>
+        <Pokemons pokemon={this.state.pokemon} />
       </div>
     )
   }
