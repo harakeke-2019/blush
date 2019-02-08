@@ -177,9 +177,9 @@ font-family: Montserrat;
 .stateChange{
   height: 500px;
   width: 100%;
-  background-image: url('pokemon-background-png');
+  background-image: url('pokemon-background.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+
 }

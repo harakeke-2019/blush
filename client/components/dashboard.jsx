@@ -17,20 +17,18 @@ render(){
     <div className="row">
         <div className="col1">
             <div className="userInfo">
-                <p>Hello {name}</p>
-            <div className="starSign+Birthday">
-                <p>{starSign}</p>
-                <h6>{Birthay}</h6>
+                <p>Hello name</p>
+            <div className="starSignBirthday">
+                <p>starSign</p>
+                <h6>Birthay</h6>
             </div>
             </div>
             <p className="intro">Discover what your Pokemon is based on your starsign</p>
               <div className="dashboardbuttons">
                 <div className="button">
-                    <p>Taurus</p>
+                    <p>Back</p>
                       </div>
-                    <div className="button">
-                        <p>Capricon</p>
-              </div>
+
       </div>
   </div>
   <div className="col2">

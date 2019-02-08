@@ -10,7 +10,7 @@ const App = () => {
       <div className = 'app'>
         <div className = 'routesContainer'>
           <Route exact path = '/' component = {Home} />
-          <Route exact path = '/dashboard' component = {Dashboard} />
+          <Route exact path = '/Dashboard' component = {Dashboard} />
         </div>
       </div>
     </Router>
