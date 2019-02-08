@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import App from './components/Test1'
 
-import App from './components/App'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
