@@ -1,32 +1,21 @@
 import React from 'react'
-import {getPokemons} from '../api'
-import Pokemons from './Pokemons'
-import Test3 from './Test3'
 
-class App extends React.Component {
-  constructor () {
-    super()
-    this.state = {
-      pokemon: {}
-    }
-  }
+import {HashRouter as Router, Route} from 'react-router-dom'
 
-  componentDidMount () {
-    const id = Math.floor(Math.random() * 19 + 1)
-    getPokemons(id)
-      .then(pokemon => {
-        this.setState({pokemon: pokemon})
-      })
-      .catch(err => { console.error('error:', err) })
-  }
+import Home from './Home'
+import Dashboard from './Dashboard'
 
-  render () {
-    return (
-      <div>
-        <Pokemons pokemon={this.state.pokemon} />
-        <Test3 />
+const App = () => {
+  return (
+    <Router>
+      <div className = 'app'>
+        <div className = 'routesContainer'>
+          <Route exact path = '/' component = {Home} />
+          <Route exact path = '/Dashboard' component = {Dashboard} />
+        </div>
       </div>
-    )
-  }
+    </Router>
+  )
 }
+
 export default App

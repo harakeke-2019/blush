@@ -2,7 +2,7 @@ import React from 'react'
 import FontAwesome from 'react-fontawesome'
 import {getFeels} from '../api'
 
-class Test3 extends React.Component {
+class Dropdown extends React.Component {
   constructor (props) {
     super()
     this.state = {
@@ -133,4 +133,4 @@ class Test3 extends React.Component {
   }
 }
 
-export default Test3
+export default Dropdown
