@@ -1,12 +1,28 @@
 import React from "react"
+import {getPokemons} from '../api'
+import Pokemons from './Pokemons'
+
 
 class Dashboard extends React.Component{
   constructor(props){
     super(props)
-    this.state={}
+    this.state={
+    pokemon: {}
   }
+
+  componentDidMount () {
+    const id = Math.floor(Math.random() * 19 + 1)
+    getPokemons(id)
+      .then(pokemon => {
+        this.setState({pokemon: pokemon})
+      })
+      .catch(err => { console.error('error:', err) })
+  }
+
+
 render(){
   return(
+
     <div className="pageWrapperDashboard">
 <div>
     <div className="smlogo">
@@ -33,7 +49,9 @@ render(){
   </div>
   <div className="col2">
     <div className="stateChange">
-
+    <div className="api">
+      <Pokemons pokemon={this.state.pokemon} />
+    </div>
     </div>
   </div>
 </div>
@@ -44,6 +62,7 @@ render(){
   )
 
   }
+}
 }
 
 export default Dashboard

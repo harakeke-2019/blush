@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './components/Test1'
+import Dashboard from './components/Dashboard'
 
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <App />,
+    <Dashboard />,
     document.getElementById('app')
   )
 })
