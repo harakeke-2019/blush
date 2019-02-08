@@ -2,6 +2,8 @@ import React from 'react'
 import {getPokemons} from '../api'
 import Pokemons from './Pokemons'
 
+
+
 class App extends React.Component {
   constructor () {
     super()
