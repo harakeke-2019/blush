@@ -18,10 +18,7 @@ class App extends React.Component {
         this.setState({pokemon: pokemon})
       })
       .catch(err => { console.error('error:', err) })
-    
   }
-
-  
 
   render () {
     return (
