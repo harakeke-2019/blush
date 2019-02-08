@@ -1,10 +1,20 @@
 import React from 'react'
+import {HashRouter as Router, Route} from 'react-router-dom'
+
+import Home from './Home'
+import Dashboard from  './Dashboard'
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <Router>
+      <div className = 'app'>
+        <div className = 'routesContainer'>
+          <Route exact path = '/' component = {Home} />
+          <Route exact path = '/dashboard' component = {Dashboard} />
+        </div>
+      </div>
+    </Router>
   )
 }
 
 export default App
-

@@ -1,8 +1,8 @@
 import React from "react"
 
 class Home extends React.Component{
-  construct(props){
-    super()
+  constructor(props){
+    super(props)
     this.state={}
   }
 render(){
@@ -18,7 +18,7 @@ render(){
             <input type="text" placeholder="  Birthday" /><br />
             <input type="text" placeholder="  Location" /><br />
             <div className="enter">
-                <a href="dashboard.html">enter</a>
+              <Link to='/dashboard'>enter</Link>
             </div>
         </form>
 
