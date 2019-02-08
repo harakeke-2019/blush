@@ -9,7 +9,7 @@ class Test1 extends React.Component {
     }
   }
 
-  componentDidMount() {
+  componentDidMount () {
     getFeels().then(res => {
       this.setState(
         {data: res}
