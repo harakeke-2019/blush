@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Altair';
+    src: url('Altair-Light.woff2') format('woff2'),
+        url('Altair-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+.body{
+  font-family: Altair,Arial;
+  font-weight: 300;
+  font-style: normal;
+  display: block;
+  font-size: 15px;
+  margin: 0px!important;
+  color: #3E58A3;
+
+}
+
+.pageWrapper{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('Background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin: -8px;
+}
+
+.pageWrapperDashboard{
+    height: 100vh;
+    width: 100%;
+    background-image: url('Background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 40px;
+    padding-bottom: 150px;
+    margin: 0px;
+}
+
+.logoWrapper{
+text-align: center;
+}
+
+.logoWrapper img{
+  width:650px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.logoWrapper h3{
+  margin-top: 10px;
+  font-size: 40px;
+font-family: Montserrat;
+  color: #3E58A3;
+}
+
+
+.buttonWrapper{
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 200px;
+}
+.buttonWrapper input{
+  width: 300px;
+  padding: 20px 0px 20px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  background-color: white;
+  color: #683094;
+  border-radius: 50px;
+  text-decoration: none;
+
+}
+
+.enter{
+  font-family: Montserrat;
+  width: 300px;
+  padding: 20px 0px 20px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  background-color: #F8C246;
+    color: #3E58A3;
+    border-radius: 50px;
+  text-decoration: none;
+
+}
+
+/* dashboard.html styling */
+
+.smlogo{
+  text-align: center;
+}
+
+.smlogo img{
+  width: 180px;
+}
+
+.row{
+  margin-top: 150px;
+}
+
+.col1{
+  box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  padding: 0px 40px 0px 40px;
+  width: 50%;
+}
+.col2{
+  box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  padding: 0px 40px 0px 40px;
+  width: 49%;
+}
+
+.userInfo{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #3E58A3;
+}
+
+.userInfo p{
+  font-family: Altair;
+  color:#3E58A3;
+  font-size: 20px;
+}
+
+.userInfo h6{
+  font-family: Altair;
+  color:#3E58A3;
+  font-size: 14px;
+  padding-top: 10px;
+  margin: 0px;
+}
+
+.intro{
+  padding: 20px 0px 20px 0px;
+  font-family: Montserrat;
+    color:#3E58A3;
+    font-size: 20px;
+}
+
+.dashboardbuttons{
+  margin-top: 60px;
+}
+
+.button{
+  font-family: Montserrat;
+  text-align: center;
+    width: 300px;
+    padding: 10px 0px 10px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: white;
+    color: #3E58A3;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px grey;
+  }
+.button:hover{
+    background-color: #F8C246;
+  }
+
+.stateChange{
+  height: 500px;
+  background-color: #F8C246;
+
+}
