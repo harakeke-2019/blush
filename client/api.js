@@ -1,7 +1,5 @@
 import request from 'superagent'
 
-const url = 'http://localhost:3000/api/v1/feelings'
-
 const pokeapiUrl = 'https://pokeapi.co/api/v2/pokemon-form'
 
 export function getPokemons (id) {
@@ -10,12 +8,15 @@ export function getPokemons (id) {
     .then(res => {
       return {
         name: res.body.name,
-        image: res.body.sprites.front_default
+        imageFront: res.body.sprites.front_default,
+        imageFrontShiny: res.body.sprites.front_shiny,
+        imageBack: res.body.sprites.back_default,
+        imageBackShiny: res.body.sprites.back_shiny
       }
     })
 }
 
-export function getFeels () {
+export function getAbility(id) {
   return request.get(url).then(res => res.body)
 }
 export default getPokemons
