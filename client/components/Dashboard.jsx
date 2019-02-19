@@ -7,11 +7,11 @@ class Dashboard extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      pokemon: {}
+      pokemon: {},
     }
   }
   componentDidMount () {
-    const id = Math.floor(Math.random() * 19 + 1)
+    const id = Math.floor(Math.random() * 50 + 1)
     getPokemons(id)
       .then(pokemon => {
         this.setState({pokemon: pokemon})
