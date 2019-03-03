@@ -1,60 +1,41 @@
 import React from 'react'
-import {getPokemons} from '../api'
-import Pokemons from './Pokemons'
-import {Link} from 'react-router-dom'
+import Request from 'superagent'
 
 class Dashboard extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      pokemon: {}
+      movies: []
     }
   }
+
   componentDidMount () {
-    const id = Math.floor(Math.random() * 19 + 1)
-    getPokemons(id)
-      .then(pokemon => {
-        this.setState({pokemon: pokemon})
-      })
-      .catch(err => { console.error('error:', err) })
+    const movieUrl = 'https://api.themoviedb.org/3/search/movie?api_key=81009ccb87e4c64254d9e74c695d113a&query=st'
+    Request.get(movieUrl).then(res => {
+      this.setState(
+        {movies: res.body.results}
+      )
+    })
+  }
+
+  getMovieTitles = () => {
+    return this.state.movies.map((movie, index) => {
+      return ( 
+      <li key={index}>
+          {movie.title}
+      </li>)
+       }) 
   }
 
   render () {
+    console.log(this.state.movies)
     return (
 
       <div className="pageWrapperDashboard">
-        <div>
-          <div className="smlogo">
-            <img src="pokemon-logo.png" alt="pokemon" />
-          </div>
-        </div>
-        <main>
-          <div className="row">
-            <div className="col1">
-              <div className="userInfo">
-                <p>Hello Evandah</p>
-                <div className="starSignBirthday">
-                  <p>Your starsign is: Aquarius</p>
-                  <h6>09/02/1996</h6>
-                </div>
-              </div>
-              <p className="intro">Discover what your Pokemon is based on your starsign</p>
-              <div className="dashboardbuttons">
-                <div className="button">
-                  <p><Link to='/'> back</Link></p>
-                </div>
-
-              </div>
-            </div>
-            <div className="col2">
-              <div className="stateChange">
-                <div className="api">
-                  <Pokemons pokemon={this.state.pokemon} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
+        <h1>Movies starting with ST</h1>
+        <ul>
+        {this.getMovieTitles()}
+        </ul>
       </div>
 
     )
